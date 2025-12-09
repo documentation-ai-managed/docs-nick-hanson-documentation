@@ -1,0 +1,125 @@
+---
+title: Getting Started
+description: Quick guide to set up your documentation space and create your first project.
+---
+
+## Overview
+
+Welcome to Nick Hanson Documentation. Set up your account, configure your space, and navigate the interface in minutes. This guide walks you through account creation, initial setup, and key navigation features.
+
+<Callout kind="tip">
+  Use your brand color `#3B82F6` for custom themes during setup.
+</Callout>
+
+## Create Your Account
+
+Follow these steps to sign up and verify your email.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Visit `https://nickhanson.dev` and click **Sign Up**.
+
+    Enter your email and create a strong password.
+
+    ```bash
+    # Example password requirements
+    # Minimum 12 characters, includes uppercase, number, symbol
+    MySecurePass123!
+    ```
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for the verification link.
+
+    Click **Verify Account** to activate.
+  </Step>
+  <Step title="Set Profile" icon="settings">
+    Add your name, avatar, and organization.
+
+    Select brand color `#3B82F6`.
+  </Step>
+</Steps>
+
+## Initial Setup
+
+Configure your documentation space with these platform-specific instructions.
+
+<Tabs>
+  <Tab title="Web" icon="globe">
+    Log in at `https://app.nickhanson.dev`.
+
+    Create your first space:
+
+    ```javascript
+    // Space configuration example
+    const spaceConfig = {
+      name: "My Project Docs",
+      theme: { primaryColor: "#3B82F6" },
+      features: ["search", "analytics"]
+    };
+    ```
+
+    Import existing Markdown files via drag-and-drop.
+  </Tab>
+  <Tab title="CLI" icon="terminal">
+    Install the CLI tool:
+
+    <CodeGroup tabs="npm,yarn">
+      ```bash
+      npm install -g @nickhanson/cli
+      ```
+      ```bash
+      yarn global add @nickhanson/cli
+      ```
+    </CodeGroup>
+
+    Initialize your space:
+
+    ```bash
+    nickhanson init my-docs --color #3B82F6
+    cd my-docs
+    nickhanson dev
+    ```
+  </Tab>
+</Tabs>
+
+## Navigate the Interface
+
+Discover core sections quickly.
+
+<Columns cols={3}>
+  <Card title="Spaces" icon="folder" href="/docs/spaces">
+    Manage multiple documentation projects.
+  </Card>
+  <Card title="Editor" icon="edit-3" href="/docs/editor">
+    Write MDX with live preview.
+  </Card>
+  <Card title="Publish" icon="globe" href="/docs/publish">
+    Deploy custom domains instantly.
+  </Card>
+</Columns>
+
+<Expandable title="Advanced Navigation Tips" default-open="false">
+
+Use keyboard shortcuts:
+
+- `<kbd>Ctrl</kbd>+<kbd>K</kbd>`: Quick search
+- `<kbd>Ctrl</kbd>+<kbd>S</kbd>`: Save draft
+- `<kbd>Ctrl</kbd>+<kbd>P</kbd>`: Switch spaces
+
+Customize sidebar via **Settings > Layout**.
+
+</Expandable>
+
+## Next Steps
+
+Your space is ready. Create your first page:
+
+```javascript
+// Example first page frontmatter
+---
+title: "My First Page"
+description: "Welcome to my docs."
+---
+```
+
+Explore [Spaces](/docs/spaces) for project organization or [Editor](/docs/editor) for content creation. Contact support at `support@nickhanson.dev` for help.

@@ -1,0 +1,108 @@
+---
+title: Frequently Asked Questions
+description: Answers to common queries about using the documentation platform.
+---
+
+## Troubleshooting Access Issues
+
+You may encounter access problems when logging into Nick Hanson Documentation. Follow these steps to resolve common issues.
+
+<Callout kind="tip">
+  Ensure your browser allows cookies and third-party storage for authentication to work smoothly.
+</Callout>
+
+<Steps>
+  <Step title="Clear Browser Cache" icon="trash-2">
+    Open your browser settings and clear cache and cookies for the past 24 hours.
+  </Step>
+  <Step title="Check Network Connection" icon="wifi">
+    Verify your internet connection and try accessing from a different network if possible.
+  </Step>
+  <Step title="Reset Password" icon="key">
+    Navigate to the login page and use the "Forgot Password" link to reset via email.
+  </Step>
+  <Step title="Contact Support" icon="mail">
+    If issues persist, email support@nickhanson.com with your account details and error screenshot.
+  </Step>
+</Steps>
+
+| Common Error | Cause | Solution |
+|--------------|-------|----------|
+| 403 Forbidden | Insufficient permissions | Request admin access from your team lead |
+| 429 Too Many Requests | Rate limiting | Wait 5 minutes or use incognito mode |
+| CORS Error | Browser extension conflict | Disable ad blockers temporarily |
+
+## Best Practices for Organization
+
+Organize your documentation effectively to improve navigation and collaboration.
+
+<CodeGroup tabs="Folder Structure,Page Naming">
+  ```bash
+  docs/
+  ├── quickstart/
+  │   ├── index.mdx
+  │   └── installation.mdx
+  ├── api/
+  │   ├── endpoints.mdx
+  │   └── authentication.mdx
+  └── changelog.mdx
+  ```
+  ```markdown
+  # Good: api-v1-endpoints.mdx
+  # Good: user-authentication-guide.mdx
+  # Avoid: API_V1.mdx (use kebab-case)
+  # Avoid: readme.txt (use .mdx)
+  ```
+</CodeGroup>
+
+<Columns cols={3}>
+  <Card title="Use Folders" icon="folder" href="#folders">
+    Group related pages for better discoverability.
+  </Card>
+  <Card title="Consistent Naming" icon="tag" href="#naming">
+    Adopt kebab-case for file names like `user-guide.mdx`.
+  </Card>
+  <Card title="Frontmatter Always" icon="file-text" href="#frontmatter">
+    Add YAML frontmatter to every page for SEO and metadata.
+  </Card>
+</Columns>
+
+## Exporting Documentation
+
+Export your docs as static sites or PDFs for sharing outside the platform.
+
+<Tabs>
+  <Tab title="Static Site (Recommended)" icon="globe">
+    <Steps>
+      <Step title="Generate Build" icon="download">
+        Run `npm run build` in your docs root directory.
+      </Step>
+      <Step title="Deploy to Hosting" icon="upload-cloud">
+        Upload the `dist/` folder to Netlify or Vercel.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="PDF Export" icon="file-text">
+    Use the built-in exporter:
+
+    ```bash
+    npx @nickhanson/docs export --format=pdf --output=docs.pdf
+    ```
+
+    <Callout kind="alert">
+      PDF export supports up to 50 pages; split large sites.
+    </Callout>
+  </Tab>
+</Tabs>
+
+<ExpandableGroup>
+  <Expandable title="How do I recover a deleted page?" default-open="true">
+    Access the version history sidebar on any folder. Restore from the last 30 days automatically.
+  </Expandable>
+  <Expandable title="Can I customize the theme?">
+    Edit `theme.config.tsx` to change colors like primary: `#3B82F6`. Restart the dev server after changes.
+  </Expandable>
+  <Expandable title="What MDX components are supported?">
+    Use components like `<Callout>`, `<Steps>`, and `<CodeGroup>` for rich content. See the component reference for full list.
+  </Expandable>
+</ExpandableGroup>

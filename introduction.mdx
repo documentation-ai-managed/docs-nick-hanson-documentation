@@ -1,0 +1,102 @@
+---
+title: Welcome to Nick Hanson Documentation
+description: An overview of the default documentation space for organizing and managing project documentation.
+---
+
+## Overview
+
+Welcome to Nick Hanson Documentation, your central hub for organizing and managing all project documentation. You create structured, professional docs using Markdown and MDX components. This platform supports version control, search, and collaboration, making it ideal for developers, teams, and projects of any size.
+
+The purpose of Nick Hanson Documentation is to streamline your documentation workflow. You build knowledge bases, API references, and user guides without complexity. Key benefits include intuitive editing, rich components for interactive content, and seamless integration with your existing tools.
+
+## Key Benefits
+
+Nick Hanson Documentation offers powerful features to enhance your workflow.
+
+<Columns cols={3}>
+  <Card title="Intuitive Organization" icon="folder" href="/docs/organization">
+    Organize docs into projects, sections, and pages with drag-and-drop navigation.
+  </Card>
+  <Card title="Rich Components" icon="components" href="/docs/components">
+    Use interactive elements like tabs, steps, and cards to engage readers.
+  </Card>
+  <Card title="Collaboration Ready" icon="users" href="/docs/collaboration">
+    Share, review, and version control docs with your team in real time.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Start small: Begin with a single project to see immediate value.
+</Callout>
+
+## Quick Start
+
+Follow these steps to set up your first documentation site.
+
+<Steps>
+  <Step title="Create a Project" icon="plus">
+    Sign up and create a new documentation space. Name it after your project, like `my-app-docs`.
+  </Step>
+  <Step title="Add Your First Page" icon="file-text">
+    Click "New Page" and use the MDX editor to write content.
+  </Step>
+  <Step title="Publish and Share" icon="globe">
+    Preview changes, then publish. Share the live URL with your team.
+  </Step>
+</Steps>
+
+## Brand Guidelines
+
+Maintain consistency with Nick Hanson Documentation's branding. Use the primary brand color `{`#3B82F6`}` for accents.
+
+<Tabs>
+  <Tab title="Colors" icon="palette">
+    | Element     | Color Value    | Usage                  |
+    |-------------|----------------|------------------------|
+    | Primary     | `{`#3B82F6`}` | Buttons, links, headers |
+    | Secondary   | `{`#1E40AF`}` | Hover states           |
+    | Background  | `{`#FFFFFF`}` | Main content areas     |
+  </Tab>
+  <Tab title="Typography" icon="type">
+    Use sans-serif fonts like Inter or system defaults. Headings start at H2 (`##`), never H1.
+    
+    Example:
+    
+    ```css
+    h2 {
+      color: #3B82F6;
+      font-weight: 600;
+    }
+    ```
+  </Tab>
+  <Tab title="Components" icon="components">
+    Leverage built-in components for consistency. Avoid custom HTML where possible.
+  </Tab>
+</Tabs>
+
+<Expandable title="Advanced Customization" default-open="false">
+  Integrate custom CSS with your brand color:
+  
+  <CodeGroup tabs="CSS,SCSS">
+  ```css
+  :root {
+    --brand-primary: #3B82F6;
+  }
+  
+  .button {
+    background-color: var(--brand-primary);
+    border-radius: 6px;
+  }
+  ```
+  ```scss
+  $brand-primary: #3B82F6;
+  
+  .button {
+    background-color: $brand-primary;
+    border-radius: 6px;
+  }
+  ```
+  </CodeGroup>
+</Expandable>
+
+This setup ensures your docs look professional and on-brand. Explore more in the navigation sidebar.
